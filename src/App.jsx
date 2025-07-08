@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
+import Skills from './components/Skills'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <div className='mx-30'>
       <Header />
       <HeroSection />
+      <Skills />
     </div>
   )
 }
