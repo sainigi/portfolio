@@ -23,7 +23,7 @@ function Skills() {
             <div className="flex justify-center lg:my-24 mb-16">
                 <h1 className="lg:text-6xl text-4xl">My <span className="font-extrabold">Skills</span></h1>
             </div>
-            <div className="grid grid-flow-row lg:grid-cols-5 grid-cols-2  gap-8">
+            <div className="grid grid-flow-row lg:grid-cols-5 grid-cols-2 gap-8">
                 <SkillButton skillIconName={ReactIcon} skillText={"React"}/>
                 <SkillButton skillIconName={AngularIcon} skillText={"Angular"}/>
                 <SkillButton skillIconName={JqueryIcon} skillText={"jQuery"}/>
