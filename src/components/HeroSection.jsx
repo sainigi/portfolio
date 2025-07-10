@@ -1,26 +1,28 @@
 import HeroIcon from '.././assets/HeroIcon.svg'
-import GithubIcon from '.././assets/GithubIcon.svg'
-import TwitterIcon from '.././assets/TwitterIcon.svg'
-import LinkedinIcon from '.././assets/LinkedinIcon.svg'
-import DiscordIcon from '.././assets/DiscordIcon.svg'
+import TwitterIcon from '.././assets/socialmedia/TwitterIcon.svg'
+import LinkedinIcon from '.././assets/socialmedia/LinkedinIcon.svg'
+import DiscordIcon from '.././assets/socialmedia/DiscordIcon.svg'
+import GithubIcon from '.././assets/socialmedia/GithubIcon.png'
 import SocialMediaButton from './SocialMediaButton'
 
 function HeroSection() {
-    return <div className='w-full grid grid-flow-col gap-10 mt-10'>
+    return <div className='w-full grid grid-flow-col gap-10 mt-10 px-40'>
         <div className="left-text-part col-span-5 mt-10">
             <div className='font-medium grid text-6xl leading-[56px] tracking-[-0.02em] space-y-2 '>
                 <p>
-                    Hello I'm <span className="font-bold">Monu Saini.</span>
+                    Hello I'm <span className="font-bold">Monu Saini</span>
                 </p>
                 <p>
                     <span className="font-bold">Frontend</span>{' '}
                     <span className="text-transparent outline-text not-italic font-extrabold text-shadow-gray-100">Developer</span>
                 </p>
                 <p>
-                    Based in <span className="font-bold">India.</span>
+                    Crafting Clean <span className="font-bold">Interfaces</span>
                 </p>
                 <div className='font-normal text-[16px] leading-[24px] tracking-[0.02em] text-zinc-500 w-[600px] h-[96px] mt-6'>
-                    <p>I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.</p>
+                    <p>I specialize in building modern, responsive web applications using technologies like React and Angular. I’m passionate about clean design and smooth interactions.  Clean code and thoughtful design are my priorities.
+                    </p>
+                    <span className='font-bold text-zinc-700'>Driven by detail, powered by code.</span>
                 </div>
             </div>
 
@@ -33,7 +35,7 @@ function HeroSection() {
             
         </div>
         <div className="right-icon-part col-span-7">
-            <img src={HeroIcon} className=" absolute left-2/3 transform -translate-x-1/2 flex gap-5 w-[600px]" alt="HeroIcon" />
+            <img src={HeroIcon} className=" absolute left-2/3 transform -translate-x-1/2 flex  w-[600px] ml-20" alt="HeroIcon" />
         </div>
     </div>
 }

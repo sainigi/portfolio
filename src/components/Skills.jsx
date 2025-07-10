@@ -1,35 +1,40 @@
 import SkillButton from "./SkillButton"
-import FigmaIcon from '.././assets/FigmaIcon.svg'
-import ExpressIcon from '.././assets/ExpressIcon.svg'
-import GitIcon from '.././assets/GitIcon.svg'
-import JavscriptIcon from '.././assets/JavscriptIcon.svg'
-import MongoDbIcon from '.././assets/MongoDbIcon.svg'
-import NestIcon from '.././assets/NestIcon.svg'
-import NextjsIcon from '.././assets/NextjsIcon.svg'
-import NodejsIcon from '.././assets/NodejsIcon.svg'
-import PostgresSqlIcon from '.././assets/PostgresSqlIcon.svg'
-import SocketIcon from '.././assets/SocketIcon.svg'
-import SassIcon from '.././assets/SassIcon.svg'
-import ReactIcon from '.././assets/ReactIcon.svg'
-import TailwindcssIcon from '.././assets/TailwindcssIcon.svg'
-import TypeScriptIcon from '.././assets/TypeScriptIcon.svg'
+import FigmaIcon from '.././assets/skills/FigmaIcon.svg'
+import ExpressIcon from '.././assets/skills/ExpressIcon.svg'
+import GitIcon from '.././assets/skills/GitIcon.svg'
+import JavscriptIcon from '.././assets/skills/JavscriptIcon.svg'
+import MongoDbIcon from '.././assets/skills/MongoDbIcon.svg'
+import NestIcon from '.././assets/skills/NestIcon.svg'
+import NextjsIcon from '.././assets/skills/NextjsIcon.svg'
+import NodejsIcon from '.././assets/skills/NodejsIcon.svg'
+import PostgresSqlIcon from '.././assets/skills/PostgresSqlIcon.svg'
+import SocketIcon from '.././assets/skills/SocketIcon.svg'
+import SassIcon from '.././assets/skills/SassIcon.svg'
+import ReactIcon from '.././assets/skills/ReactIcon.svg'
+import TailwindcssIcon from '.././assets/skills/TailwindcssIcon.svg'
+import TypeScriptIcon from '.././assets/skills/TypeScriptIcon.svg'
+import JqueryIcon from '.././assets/skills/JqueryIcon.png'
+import AngularIcon from '.././assets/skills/AngularIcon.png'
+import JavaIcon from '.././assets/skills/JavaIcon.png'
+import PythonIcon from '.././assets/skills/PythonIcon.png'
 
 function Skills() {
-    return <div className="my-30">
+    return <div className="my-30 px-48">
             <div className="flex justify-center my-24">
-                <h1 className="text-6xl">My <span className="font-bold">Skills</span></h1>
+                <h1 className="text-6xl">My <span className="font-extrabold">Skills</span></h1>
             </div>
             <div className="grid grid-flow-row grid-cols-5 gap-8">
                 <SkillButton skillIconName={ReactIcon} skillText={"React"}/>
+                <SkillButton skillIconName={AngularIcon} skillText={"Angular"}/>
+                <SkillButton skillIconName={JqueryIcon} skillText={"jQuery"}/>
                 <SkillButton skillIconName={JavscriptIcon} skillText={"Javascript"}/>
-                <SkillButton skillIconName={NodejsIcon} skillText={"Node JS"}/>
-                <SkillButton skillIconName={TailwindcssIcon} skillText={"Tailwindcss"}/>
                 <SkillButton skillIconName={TypeScriptIcon} skillText={"TypeScript"}/>
                 <SkillButton skillIconName={PostgresSqlIcon} skillText={"Postgres SQL"}/>
-                <SkillButton skillIconName={SassIcon} skillText={"Sass"}/>
-                <SkillButton skillIconName={NextjsIcon} skillText={"Next JS"}/>
+                <SkillButton skillIconName={TailwindcssIcon} skillText={"Tailwindcss"}/>
+                <SkillButton skillIconName={PythonIcon} skillText={"Python"}/>
+                <SkillButton skillIconName={JavaIcon} skillText={"Java"}/>
                 <SkillButton skillIconName={GitIcon} skillText={"Git"}/>
-                <SkillButton skillIconName={FigmaIcon} skillText={"Figma"}/>
+                {/* <SkillButton skillIconName={FigmaIcon} skillText={"Figma"}/> */}
             </div>
     </div>
 }
