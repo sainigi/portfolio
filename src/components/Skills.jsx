@@ -19,11 +19,11 @@ import JavaIcon from '.././assets/skills/JavaIcon.png'
 import PythonIcon from '.././assets/skills/PythonIcon.png'
 
 function Skills() {
-    return <div className="lg:my-30 lg:px-48 pt-5 my-16 px-4 pr-8" id="skills-section">
+    return <div className="lg:my-30 lg:px-48 pt-5 my-16 px-4" id="skills-section">
             <div className="flex justify-center lg:my-24 mb-16">
                 <h1 className="lg:text-6xl text-4xl">My <span className="font-extrabold">Skills</span></h1>
             </div>
-            <div className="grid grid-flow-row lg:grid-cols-5 grid-cols-2 gap-8">
+            <div className="grid grid-flow-row lg:grid-cols-5 grid-cols-2 md:grid-cols-3 gap-8 text-center">
                 <SkillButton skillIconName={ReactIcon} skillText={"React"}/>
                 <SkillButton skillIconName={AngularIcon} skillText={"Angular"}/>
                 <SkillButton skillIconName={JqueryIcon} skillText={"jQuery"}/>
