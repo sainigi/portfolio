@@ -8,19 +8,19 @@ function ProjectSection() {
         window.location.assign(url);
     };
 
-    return <div className="bg-black px-52 py-20">
+    return <div className="bg-black lg:px-52 px-4 lg:py-20 py-16" id="project-section">
         <div>
-            <h1 className="text-white text-6xl  text-center pb-16">My <span className="font-extrabold">Project</span></h1>
+            <h1 className="text-white lg:text-6xl text-4xl text-center pb-16">My <span className="font-extrabold">Project</span></h1>
         </div>
         <div className='flex flex-col gap-20'>
             <div className="Project-1 ">
-                <div className='flex gap-12 items-center'>
+                <div className='flex flex-col lg:flex-row gap-12 items-center'>
                     <div className=' border rounded-md flex-1/2'>
                         <img src={TheCenter} alt='project1 img' className='w-[530px] h-96 border rounded-2xl' />
                     </div>
                     <div className='flex flex-col gap-8  justify-center flex-1/2'>
-                        <h1 className='text-white text-6xl font-extrabold'>01</h1>
-                        <h2 className='text-4xl font-bold text-white'>The Center Project</h2>
+                        <h1 className='text-white lg:text-6xl text-4xl font-extrabold'>01</h1>
+                        <h2 className='lg:text-4xl text-3xl font-bold text-white'>The Center </h2>
                         <p className='text-zinc-500'>A training and certification platform for a global restaurant chain, used by franchise managers and staff. It offers video courses and step-by-step guides on recipes and operational processes.</p>
                         <p className='text-zinc-500'>I developed custom AEM components using Sightly, collaborated with backend teams for API integration, and implemented Java Servlets for dynamic content. I also integrated Adobe Learning Manager for course tracking and used Coveo for analytics.</p>
                         {/* <img src={GoToIcon} alt='go to icon' className='w-6 invert cursor-pointer hover:bg-zinc-500'/> */}
@@ -36,10 +36,10 @@ function ProjectSection() {
             </div>
 
             <div className="Project-2 ">
-                <div className='flex gap-12 items-center'>
+                <div className='flex flex-col-reverse lg:flex-row gap-12 items-center'>
                     <div className='flex flex-col gap-8  justify-center flex-1/2'>
-                        <h1 className='text-white text-6xl font-extrabold'>02</h1>
-                        <h2 className='text-4xl font-bold text-white'>UrJobMart</h2>
+                        <h1 className='text-white lg:text-6xl text-4xl font-extrabold'>02</h1>
+                        <h2 className='lg:text-4xl text-3xl font-bold text-white'>UrJobMart</h2>
                         <p className='text-zinc-500'>A recruitment platform connecting companies and students. Companies post job openings, and students apply directly through the portal.</p>
                         <p className='text-zinc-500'>I developed responsive user interfaces using Angular, integrated RESTful APIs, and implemented AWS S3 for secure file uploads. I also added Elasticsearch for fast search and improved the UI framework for scalable form and table generation.</p>
 
@@ -52,20 +52,20 @@ function ProjectSection() {
                             </svg>
                         </div>
                     </div>
-                    <div className='flex-1/2'>
+                    <div className='flex-1/2 order-1 lg:order-none'>
                         <img src={UrjobmartProject} alt='project1 img' className='w-[530px] h-96 border rounded-2xl' />
                     </div>
                 </div>
             </div>
 
             <div className="Project-3 ">
-                <div className='flex gap-12 items-center'>
+                <div className='flex flex-col lg:flex-row gap-12 items-center'>
                     <div className='flex-1/2'>
                         <img src={KotakProject} alt='KotakProject' className='w-[530px] h-96 border rounded-2xl' />
                     </div>
                     <div className='flex flex-col gap-8  justify-center flex-1/2'>
-                        <h1 className='text-white text-6xl font-extrabold'>03</h1>
-                        <h2 className='text-4xl font-bold text-white'>Current Account DIY – Kotak Bank</h2>
+                        <h1 className='text-white lg:text-6xl text-4xl font-extrabold'>03</h1>
+                        <h2 className='lg:text-4xl text-3xl font-bold text-white'>Current Account DIY – Kotak Bank</h2>
                         <p className='text-zinc-500'>A self-serve current account onboarding platform for Private Ltd. and LLP customers</p>
                         <p className='text-zinc-500'>Designed a secure and user-friendly application to support current account openings for companies via website or personalized link. Integrated PAN, Aadhaar, and other KYC verifications, and developed APIs using VAHANA for real-time validation and smooth onboarding.</p>
                         {/* <img src={GoToIcon} alt='go to icon' className='w-6 invert cursor-pointer hover:bg-zinc-500'/> */}

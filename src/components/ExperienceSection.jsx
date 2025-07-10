@@ -3,16 +3,16 @@ import decimalLogo from '.././assets/companies/DecimalLogo.svg'
 import astrapiaLogo from '.././assets/companies/AstrapiaLogo.png'
 
 function ExperienceSection() {
-    return <div className="bg-black pb-16 my-2 px-40">
+    return <div className="bg-black pb-16 my-2 lg:px-40 px-4">
         <div className="">
-            <h1 className="text-white text-6xl text-center py-16">My <span className="font-extrabold">Experience</span></h1>
+            <h1 className="text-white lg:text-6xl text-4xl text-center py-16">My <span className="font-extrabold">Experience</span></h1>
         </div>
-        <div className="px-20 py-8 flex flex-col gap-16">
+        <div className="lg:px-20 px-4 py-8 flex flex-col gap-16">
             <div className="border-white border rounded-md text-white p-4 py-6">
-                <div className="flex justify-between items-center">
+                <div className="flex lg:justify-between lg:items-center gap-4 flex-col lg:flex-row">
                     <div className="flex gap-4 items-center justify-center">
                         <img src={astrapiaLogo} className="p-0 w-24 h-10 invert" alt="personalportfoliologo" />
-                        <h1 className="font-bold text-2xl mt-4">Software Engineer at Astrapia</h1>
+                        <h1 className="font-bold lg:text-2xl text-xl mt-4">Software Engineer at Astrapia</h1>
                     </div>
                     <div>
                         <h4>Feb 2025 - Present</h4>
@@ -24,10 +24,10 @@ function ExperienceSection() {
             </div>
             
             <div className="border-white border rounded-md text-white p-4 py-6 bg-zinc-800">
-                <div className="flex justify-between items-center">
-                    <div className="flex gap-4 items-center">
+                <div className="flex lg:justify-between lg:items-center gap-4 flex-col lg:flex-row">
+                    <div className="flex gap-4 items-center justify-center">
                         <img src={sourceEaseDarkMode} className="w-24 h-12" alt="personalportfoliologo" />
-                        <h1 className="font-bold text-2xl">Software Engineer at SourceEase</h1>
+                        <h1 className="font-bold lg:text-2xl text-xl">Software Engineer at SourceEase</h1>
                     </div>
                     <div>
                         <h4>Mar 2023 - Jan 2025</h4>
@@ -39,10 +39,10 @@ function ExperienceSection() {
             </div>
 
             <div className="border-white border rounded-md text-white p-4 py-6">
-                <div className="flex justify-between items-center">
-                    <div className="flex gap-4 items-center">
+                <div className="flex lg:justify-between lg:items-center gap-4 flex-col lg:flex-row">
+                    <div className="flex gap-4 items-center justify-center">
                         <img src={decimalLogo} className="w-24 h-12 " alt="personalportfoliologo" />
-                        <h1 className="font-bold text-2xl">Associate Software Developer at Decimal</h1>
+                        <h1 className="font-bold lg:text-2xl text-xl">Associate Software Developer at Decimal</h1>
                     </div>  
                     <div>
                         <h4>Jan 2022 - Feb 2023</h4>
