@@ -7,6 +7,7 @@ import AboutMeSection from './components/AboutMeSection'
 import ProjectSection from './components/ProjectSection'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <ProjectSection />
       <ContactSection />
       <Footer />
+      <Toaster  position="top-right"  reverseOrder={false}/>
     </div>
   )
 }

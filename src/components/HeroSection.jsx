@@ -4,6 +4,7 @@ import LinkedinIcon from '.././assets/socialmedia/LinkedinIcon.svg'
 import DiscordIcon from '.././assets/socialmedia/DiscordIcon.svg'
 import GithubIcon from '.././assets/socialmedia/GithubIcon.png'
 import SocialMediaButton from './SocialMediaButton'
+import { LINKEDIN_PROFILE_URL, GITHUB_PROFILE_URL, DISCORD_PROFILE_URL } from '../utilities/info'
 
 function HeroSection() {
     return <div className='w-full lg:grid lg:grid-flow-col lg:gap-10 lg:mt-24 lg:px-40 px-4'>
@@ -32,10 +33,10 @@ function HeroSection() {
             </div>
 
             <div className='social-media lg:mt-32 mt-8 gap-4 flex'>
-                <SocialMediaButton iconName={LinkedinIcon} />
-                <SocialMediaButton iconName={GithubIcon} />
-                <SocialMediaButton iconName={DiscordIcon} />
-                <SocialMediaButton iconName={TwitterIcon} />
+                <SocialMediaButton iconName={LinkedinIcon} profileURL={LINKEDIN_PROFILE_URL} />
+                <SocialMediaButton iconName={GithubIcon} profileURL={GITHUB_PROFILE_URL} />
+                <SocialMediaButton iconName={DiscordIcon} profileURL={DISCORD_PROFILE_URL} />
+                {/* <SocialMediaButton iconName={TwitterIcon} /> */}
             </div>
             
         </div>

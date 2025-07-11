@@ -3,27 +3,78 @@ import TwitterIcon from '.././assets/socialmedia/TwitterIcon.svg'
 import LinkedinIcon from '.././assets/socialmedia/LinkedinIcon.svg'
 import DiscordIcon from '.././assets/socialmedia/DiscordIcon.svg'
 import SocialMediaButton from './SocialMediaButton'
-import Button from './Button'
+import { LINKEDIN_PROFILE_URL, GITHUB_PROFILE_URL, DISCORD_PROFILE_URL, EMAILJS_PUBLIC_KEY, EMAILJS_TEMPLATE_ID, EMAILJS_SERVICE_ID } from '../utilities/info'
+import toast from 'react-hot-toast'
+import { useRef, useState } from 'react'
+import emailjs from 'emailjs-com'
 
 function ContactSection() {
+
+    const form = useRef();
+    const [status, setStatus] = useState("");
+
+
+    const sendMail = (e) => {
+        e.preventDefault();
+        console.log('form data', form.current)
+
+        emailjs
+            .sendForm(
+                EMAILJS_SERVICE_ID,    // from EmailJS
+                EMAILJS_TEMPLATE_ID,   // from EmailJS
+                form.current,
+                EMAILJS_PUBLIC_KEY     // EmailJS Public Key (not secret)
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    toast('🎉 Message sent! Thank you for reaching out. I"ll be in touch soon. ', {
+                        style: {
+                            border: '1px solid #000000',
+                            padding: '16px',
+                            color: '#000000',
+                            fontSize: '16px',
+                            fontStyle: 'normal',
+                            fontWeight: '600'
+                        },
+                    });
+                    form.current.reset();
+                },
+                (error) => {
+                    console.log(error.text);
+                    toast('🙁 Something went wrong. You can email or WhatsApp me directly using the details on screen. Thanks! ', {
+                        style: {
+                            border: '1px solid #FF0000	',
+                            padding: '16px',
+                            color: '#FF0000	',
+                            fontSize: '16px',
+                            fontStyle: 'normal',
+                            fontWeight: '600'
+                        },
+                    });
+                }
+            );
+            
+    }
+
     return <div className=' flex flex-col lg:flex-row lg:px-24 px-4 lg:py-24 py-12 justify-center' id='contact-section'>
-        <form action="" className=" flex flex-col gap-6">
-            <input type="text" className="border-black border-2 rounded-md p-4 " placeholder="Your name" />
-            <input type="text" className="border-black border-2 rounded-md p-4 " placeholder="Email" />
-            <input type="text" className="border-black border-2 rounded-md p-4 " placeholder="Your website (If exists)" />
-            <textarea name="" id="" className="border-black border-2 rounded-md p-4 " rows="5" placeholder="How can I help?*"></textarea>
+        <form ref={form} onSubmit={(e) => { sendMail(e) }} className=" flex flex-col gap-6">
+            <input type="text" name='name' required className="border-black border-2 rounded-md p-4 " placeholder="Your name" />
+            <input type="email" name='email' required className="border-black border-2 rounded-md p-4 " placeholder="Email" />
+            <input type="text" name='website' className="border-black border-2 rounded-md p-4 " placeholder="Your website (If exists)" />
+            <textarea name="message" required className="border-black border-2 rounded-md p-4 " rows="5" placeholder="How can I help?*"></textarea>
             <div className='flex lg:flex-row flex-col lg:justify-between lg:items-center gap-4'>
                 <div className='w-40 h-16'>
-                    <button className="flex items-center justify-center gap-2 w-full hover:bg-[#404040] hover:border-[#404040] cursor-pointer  bg-black border border-black rounded-md text-white px-5 text-lg font-semibold py-4 shadow-lg">
+                    <button type="submit" className="flex items-center justify-center gap-2 w-full hover:bg-[#404040] hover:border-[#404040] cursor-pointer  bg-black border border-black rounded-md text-white px-5 text-lg font-semibold py-4 shadow-lg">
                         Get In Touch
                     </button>
                 </div>
 
                 <div className='social-media gap-4 flex'>
-                    <SocialMediaButton iconName={LinkedinIcon} />
-                    <SocialMediaButton iconName={GithubIcon} />
-                    <SocialMediaButton iconName={DiscordIcon} />
-                    <SocialMediaButton iconName={TwitterIcon} />
+                    <SocialMediaButton iconName={LinkedinIcon} profileURL={LINKEDIN_PROFILE_URL} />
+                    <SocialMediaButton iconName={GithubIcon} profileURL={GITHUB_PROFILE_URL} />
+                    <SocialMediaButton iconName={DiscordIcon} profileURL={DISCORD_PROFILE_URL} />
+                    {/* <SocialMediaButton iconName={TwitterIcon} /> */}
                 </div>
             </div>
         </form>
