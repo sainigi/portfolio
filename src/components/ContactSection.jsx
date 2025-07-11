@@ -91,8 +91,8 @@ function ContactSection() {
             <div className='font-normal text-[16px] lg:text-xl leading-[20px] lg:leading-7 tracking-[0.03em] lg:tracking-[0.02em] text-zinc-500 lg:w-[600px] lg:h-[96px] lg:mt-6 mt-5'>
                 <Reveal><p>I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p></Reveal>
             </div>
-            <Reveal><p className='lg:text-3xl text-2xl font-bold mt-4 flex gap-4'><img src={EmailIcon} alt={'email-icon'} className='w-8 ' /> sainigiofficial@gmail.com</p></Reveal>
-            <Reveal><p className='lg:text-3xl text-2xl font-bold mt-4 flex gap-4'><img src={PhoneIcon} alt={'phone-icon'} className='w-8' /> 8171733035</p></Reveal>
+            <Reveal><p className='lg:text-3xl text-xl font-bold mt-4 flex gap-4'><img src={EmailIcon} alt={'email-icon'} className='w-8 ' /> sainigiofficial@gmail.com</p></Reveal>
+            <Reveal><p className='lg:text-3xl text-xl font-bold mt-4 flex gap-4'><img src={PhoneIcon} alt={'phone-icon'} className='w-8' /> 8171733035</p></Reveal>
         </div>
     </div>
 }
