@@ -5,6 +5,7 @@ import CancelSquareIcon from '.././assets/icons/CancelSquareIcon.png'
 import CancelSquareIcon2 from '.././assets/icons/CancelSquareIcon2.png'
 import Button from './Button'
 import { useState } from 'react'
+import { Reveal } from '../utils/Reveal'
 
 function Header() {
 
@@ -27,16 +28,16 @@ function Header() {
 
         {/* Left - Logo */}
         <div className="flex items-center gap-2 cursor-pointer">
-            <img src={MSIconFill} className="w-10 lg:w-12 h-10 lg:h-12" alt="personalportfoliologo" />
-            <h1 className="font-bold lg:text-2xl text-xl">Monu Saini</h1>
+            <Reveal><img src={MSIconFill} className="w-10 lg:w-12 h-10 lg:h-12" alt="personalportfoliologo" /></Reveal>
+            <Reveal><h1 className="font-bold lg:text-2xl text-xl">Monu Saini</h1></Reveal>
         </div>
 
         {/* Center - Taskbar */}
         <div className="hidden lg:flex gap-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <a className="font-semibold text-xl hover:text-zinc-500 cursor-pointer" onClick={() => smoothScroll("#aboutme-section")}>About Me</a>
-            <a className="font-semibold text-xl hover:text-zinc-500 cursor-pointer" onClick={() => smoothScroll('#skills-section')}>Skills</a>
-            <a className="font-semibold text-xl hover:text-zinc-500 cursor-pointer" onClick={() => smoothScroll('#project-section')}>Project</a>
-            <a className="font-semibold text-xl hover:text-zinc-500 cursor-pointer" onClick={() => smoothScroll('#contact-section')}>Contact Me</a>
+            <Reveal><a className="font-semibold text-xl hover:text-zinc-500 cursor-pointer" onClick={() => smoothScroll("#aboutme-section")}>About Me</a></Reveal>
+            <Reveal><a className="font-semibold text-xl hover:text-zinc-500 cursor-pointer" onClick={() => smoothScroll('#skills-section')}>Skills</a></Reveal>
+            <Reveal><a className="font-semibold text-xl hover:text-zinc-500 cursor-pointer" onClick={() => smoothScroll('#project-section')}>Project</a></Reveal>
+            <Reveal><a className="font-semibold text-xl hover:text-zinc-500 cursor-pointer" onClick={() => smoothScroll('#contact-section')}>Contact Me</a></Reveal>
         </div>
 
         {/* Right - Resume Button & Mobile Menu Toggle */}
@@ -51,9 +52,9 @@ function Header() {
             <div className="lg:hidden">
                 <button onClick={handleMenu}>
                     {menuIconState ? (
-                        <img src={CancelSquareIcon2} className="w-8 transition duration-300" alt="menu-icon" />
+                        <Reveal><img src={CancelSquareIcon2} className="w-8 transition duration-300" alt="menu-icon" /></Reveal>
                     ) : (
-                        <img src={MenuSquareIcon} className="w-8 transition duration-300" alt="menu-icon" />
+                        <Reveal><img src={MenuSquareIcon} className="w-8 transition duration-300" alt="menu-icon" /></Reveal>
                     )}
                 </button>
             </div>
